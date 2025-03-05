@@ -3,8 +3,8 @@
 
 <head>
     <title>Login Page</title>
-    <link rel = "stylesheet" href = "assets/css/bootstrap.css">
-    <link rel = "stylesheet" href = "assets/css/aya_style.css">
+    <link rel = "stylesheet" href = "/css/bootstrap.css">
+    <link rel = "stylesheet" href = "/css/aya_style.css">
 </head>
 
 <body>
@@ -25,14 +25,14 @@
 <body class="container-sm, bg-light">
     <h3 class="text-center">Sign In</h3>
    
-        <form id = "cvform" style="width:50%;margin:0 auto" action = "connect.php" method = "post">
+        <form id = "cvform" style="width:50%;margin:0 auto" action = "http://library.local/login.php" method = "post">
             <label for = "email">Email:</label><br>
             <input type = "email" name = "email" placeholder = "Email" class = "form-control" maxlength="15" required = ""><br>
 
             <label for = "password">Password:</label><br>
             <input type = "password" name = "password" placeholder = "Password" class = "form-control" maxlength="15" required = ""><br>
 
-            <input type = "submit" value = "Sign In">
+            <input type = "submit" value = "Sign In" name="submit">
 
 </form>
 </div>
