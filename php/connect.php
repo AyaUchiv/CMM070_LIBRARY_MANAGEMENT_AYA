@@ -1,10 +1,9 @@
 <?php
-$hostname = '192.168.10.20';
-$database = 'sign_up_forms';
+$hostname = 'localhost';
+$database = 'library_management';
 $username = 'root';
-$password = 'root';
+$password = '';
 
-require_once 'login.php';
 //connect to the database
 $conn = new mysqli($hostname,$username,$password,$database);
 

@@ -11,7 +11,7 @@ if (isset($_POST["submit"])) {
 
     $error_message = array();
 
-    if (empty($fullname) OR empty($email) OR empty($password) OR empty($repeat_password)) {
+    if (empty($fullname) or empty($email) or empty($password) or empty($repeat_password)) {
         array_push($error_message, "All fields must be filled!");
     }
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -20,20 +20,15 @@ if (isset($_POST["submit"])) {
     if (strlen($password) < 8) {
         array_push($error_message, "Password must not be less than 8 characters");
     }
-    if ($password<>$repeat_password) {
+    if ($password <> $repeat_password) {
         array_push($error_message, "Password is not identical");
     }
     if (count($error_message) > 0) {
-        foreach($error_message as $error) {
+        foreach ($error_message as $error) {
             echo $error;
         }
+    } else {
+        require_once("registration.php");
     }
-    else {
-        //user has successfully signed up
-    }
-
-    require_once "connect.php";
-
-    
 }
 ?>
